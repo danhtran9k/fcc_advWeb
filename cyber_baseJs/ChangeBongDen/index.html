@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!--
+        Code tại đây
+    -->
+    <h1>Luyện tập JS tại CyberLearn thật đỉnh</h1>
+    <h1>SỬ DỤNG DOM ĐỂ THAY ĐỔI THUỘC TÍNH SRC CỦA IMG</h1>
+    <button onclick="tatDen()">TẮT BÓNG ĐÈN</button>
+    <img id="theDen" src="imgs/pic_bulboff.gif" alt="den1" />
+    <button onclick="batDen()">BẬT BÓNG ĐÈN</button>
+    <br /><br />
+
+    <div
+      style="
+        width: 300px;
+        height: 200px;
+        background-color: aquamarine;
+        padding: 40px;
+      "
+    >
+      Tài khoản: <input type="text" name="user" id="username" /> <br /><br />
+      Mật khẩu: <input type="text" name="pass" id="password" /><br /><br />
+      <div style="text-align: center">
+        <button onclick="dangNhap()">ĐĂNG NHẬP</button>
+      </div>
+      <div
+        id="sectionThongBao"
+        style="width: 300px; height: 30px; text-align: center"
+      >
+        <p id="thePThongBao"></p>
+      </div>
+    </div>
+
+    <!--
+        Chèn Javascript cuối body
+    -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
