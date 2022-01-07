@@ -14,6 +14,15 @@ document.querySelector('#btnVerify').onclick = function () {
     spanTB.innerHTML = 'Dữ liệu không hợp lệ!';
     spanTB.className = 'alert alert-danger';
   }
+
+  // Tại sao log ra bị toggle true - false ??
+  // Nếu ko có bước kiểm tra thì true false xen kẽ ở mỗi lần bấm
+  //   NẾu có 2 giá trị thì giá trị đầu true và phía sau false
+  console.log('pattern.test(text) 2:', pattern.test(text));
+  console.log('pattern.test(text) 3:', pattern.test(text));
+  console.log('pattern.test(text) 4:', pattern.test(text));
+//   https://stackoverflow.com/questions/2851308/why-does-my-javascript-regex-test-give-alternating-results
+// https://stackoverflow.com/questions/2630418/javascript-regex-returning-true-then-false-then-true-etc 
 };
 
 document.getElementById('btnCheckPattern').onclick = function () {
