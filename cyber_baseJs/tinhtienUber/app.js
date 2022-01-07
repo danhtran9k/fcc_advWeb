@@ -9,9 +9,9 @@ const ARRAY_GIA_BLACK = [10000, 16000, 14000];
 const GIA_CHO_BLACK = 4000;
 
 function kiemTraLoaiXe() {
-  var uberX = document.getElementById('uberX');
-  var uberSUV = document.getElementById('uberSUV');
-  var uberBlack = document.getElementById('uberBlack');
+  const uberX = document.getElementById('uberX');
+  const uberSUV = document.getElementById('uberSUV');
+  const uberBlack = document.getElementById('uberBlack');
 
   if (uberX.checked) {
     return 'uberX';
@@ -21,37 +21,36 @@ function kiemTraLoaiXe() {
     return 'uberBlack';
   }
 }
+
 //Trên 3 phút mỗi tính tiền chờ, cứ 3 phút tính một lần -> chia cho 3 và làm tròn
-function tinhTienCho(thoiGianCho, giaCho) {
-  var tienCho = 0;
-  if (thoiGianCho >= 3) {
-    tienCho = Math.round(thoiGianCho / 3.0) * giaCho;
-  }
-  return tienCho;
-}
+const tinhTienCho = (thoiGianCho, giaCho) =>
+  thoiGianCho >= 3 ? Math.round(thoiGianCho / 3.0) * giaCho : 0;
 
 function tinhTien(soKm, thoiGianCho, arrayPrice, giaCho) {
-  var tienCho = tinhTienCho(thoiGianCho, giaCho);
+  const tienCho = tinhTienCho(thoiGianCho, giaCho);
   if (soKm <= 1) {
     return arrayPrice[0] + tienCho;
   } else if (soKm > 1 && soKm <= 20) {
     return arrayPrice[0] + (soKm - 1) * arrayPrice[1] + tienCho;
   } else if (soKm > 20) {
     return (
-      arrayPrice[0] + 19 * arrayPrice[1] * (soKm - 20) * arrayPrice[2] + tienCho
+      arrayPrice[0] + 19 * arrayPrice[1] + (soKm - 20) * arrayPrice[2] + tienCho
     );
   }
 }
 
 function tinhTongTien() {
-  var soKM = document.getElementById('soKM').value;
-  var thoiGianCho = document.getElementById('thoiGianCho').value;
+  //   var soKM = document.getElementById('soKM').value;
+  //   var thoiGianCho = document.getElementById('thoiGianCho').value;
 
-  soKM = parseFloat(soKM);
-  thoiGianCho = parseFloat(thoiGianCho);
+  //   soKM = parseFloat(soKM);
+  //   thoiGianCho = parseFloat(thoiGianCho);
+
+  const soKM = +document.getElementById('soKM').value;
+  const thoiGianCho = +document.getElementById('thoiGianCho').value;
 
   var tongTien = 0;
-  var loaiXe = kiemTraLoaiXe();
+  const loaiXe = kiemTraLoaiXe();
   switch (loaiXe) {
     case 'uberX':
       tongTien = tinhTien(soKM, thoiGianCho, ARRAY_GIA_UBER_X, GIA_CHO_UBER_X);
@@ -68,20 +67,26 @@ function tinhTongTien() {
   return tongTien;
 }
 
+// ====================================================================
+// Event Handle
+
 document.getElementById('btnTinhTien').onclick = function () {
-  var tongTien = tinhTongTien();
+  //   var tongTien = tinhTongTien();
   document.getElementById('divThanhTien').style.display = 'block';
-  document.getElementById('xuatTien').innerHTML = tongTien;
+  document.getElementById('xuatTien').innerHTML = tinhTongTien();
 };
+
+// ====================================================================
+// RENDER hóa đơn
 
 function renderRowChiTietKm(loaiXe, arrayKm, arrayPrice, tblBody) {
   for (var i = 0; i < arrayKm.length; i++) {
-    var tr = document.createElement('tr');
+    const tr = document.createElement('tr');
 
-    var tdLoaiXe = document.createElement('td');
-    var tdSuDung = document.createElement('td');
-    var tdDongGia = document.createElement('td');
-    var tdThanhTien = document.createElement('td');
+    const tdLoaiXe = document.createElement('td');
+    const tdSuDung = document.createElement('td');
+    const tdDongGia = document.createElement('td');
+    const tdThanhTien = document.createElement('td');
 
     tdLoaiXe.innerHTML = loaiXe;
     tdSuDung.innerHTML = arrayKm[i] + ' km';
@@ -98,13 +103,13 @@ function renderRowChiTietKm(loaiXe, arrayKm, arrayPrice, tblBody) {
 }
 
 function renderRowThoiGianCho(thoiGianCho, giaCho, tblBody) {
-  var tienCho = tinhTienCho(thoiGianCho, giaCho);
-  var trThoiGianCho = document.createElement('tr');
+  const tienCho = tinhTienCho(thoiGianCho, giaCho);
+  const trThoiGianCho = document.createElement('tr');
 
-  var tdPhutTitle = document.createElement('td');
-  var tdPhut = document.createElement('td');
-  var tdDongGia = document.createElement('td');
-  var tdThanhTien = document.createElement('td');
+  const tdPhutTitle = document.createElement('td');
+  const tdPhut = document.createElement('td');
+  const tdDongGia = document.createElement('td');
+  const tdThanhTien = document.createElement('td');
 
   tdPhutTitle.innerHTML = ' Thời gian chờ';
   tdPhutTitle.innerHTML = thoiGianCho + ' phút';
@@ -120,12 +125,12 @@ function renderRowThoiGianCho(thoiGianCho, giaCho, tblBody) {
 }
 
 function renderRowTongCong(tongTien, tblBody) {
-  var trTotal = document.createElement('tr');
+  const trTotal = document.createElement('tr');
   trTotal.className = 'alert alert-success';
 
-  var tdTotalTile = document.createElement('td');
+  const tdTotalTile = document.createElement('td');
   tdTotalTile.setAttribute('colspan', 3);
-  var tdTotal = document.createElement('td');
+  const tdTotal = document.createElement('td');
 
   tdTotalTile.innerHTML = ' Tổng tiền phải trả';
   tdTotal.innerHTML = tongTien;
@@ -136,8 +141,10 @@ function renderRowTongCong(tongTien, tblBody) {
   tblBody.appendChild(trTotal);
 }
 
+// ====================================================================
+
 function inHoaDon(loaiXe, soKm, thoiGianCho, giaCho, arrayPrice, tongTien) {
-  var tblBody = document.getElementById('tblBody');
+  const tblBody = document.getElementById('tblBody');
   tblBody.innerHTML = ''; // reset lại tbody
 
   if (soKm <= 1) {
@@ -160,6 +167,9 @@ function inHoaDon(loaiXe, soKm, thoiGianCho, giaCho, arrayPrice, tongTien) {
    */
   renderRowTongCong(tongTien, tblBody);
 }
+
+// ====================================================================
+// Event Handle
 
 document.getElementById('btnInHD').onclick = function () {
   var kq = getData();
@@ -187,13 +197,14 @@ document.getElementById('btnInHD').onclick = function () {
   }
 };
 
+// ====================================================================
+// ko hay, add vô rồi lại bóc riêng ra, thà get global luôn
 function getData() {
-  var kq = [];
-  var soKm = document.getElementById('soKM').value;
-  soKm = parseFloat(soKm);
-  kq.push(soKm);
-  var thoiGianCho = document.getElementById('thoiGianCho').value;
-  thoiGianCho = parseFloat(thoiGianCho);
-  kq.push(thoiGianCho);
-  return kq;
+  const kq = [];
+  const soKm = +document.getElementById('soKM').value;
+  //   soKm = parseFloat(soKm);
+  const thoiGianCho = +document.getElementById('thoiGianCho').value;
+  //   thoiGianCho = parseFloat(thoiGianCho);
+
+  return kq.concat(soKm, thoiGianCho);
 }
