@@ -9,5 +9,12 @@
     <h1>Demo Async - await</h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="./demoAsyncAwait.js"></script>
+
+    <!-- 
+      Với script dạng module phải chạy bằng live server mới ko bị CORS
+      ko cheat fix như kiểu send qua heroku-cors như weather app được vì đang sử dụng top level await
+     -->
+
+    <script type="module" src="./demoTopLevelAwait.js"></script>
   </body>
 </html>

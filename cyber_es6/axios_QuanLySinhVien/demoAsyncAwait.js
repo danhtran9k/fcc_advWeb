@@ -6,19 +6,19 @@ const main = async () => {
     const studentList = await axios({
       url: 'http://svcy.myclass.vn/api/SinhVien/LayDanhSachSinhVien',
       method: 'GET',
-    })
+    });
     // .then((res) => {
     //   console.log('Lay DanhSach res', res);
     // })
     // .catch((err) => {
     //   console.log('Lay DanhSach err', err);
     // });
-    console.log('studentList:', studentList);
+    // console.log('studentList:', studentList);
 
     const student = await axios({
       url: `http://svcy.myclass.vn/api/SinhVien/LayThongTinSinhVien/005`,
       method: 'GET',
-    })
+    });
     // .then((res) => {
     //   console.log('success get sv info')
     //   console.log('Lay ThongTin res', res);
@@ -26,8 +26,9 @@ const main = async () => {
     // .catch((err) => {
     //   console.log('Lay ThongTin err', err);
     // });
-    console.log('student:', student);
-    console.log('success get sv info');
+    // console.log('student:', student);
+    // console.log('success get sv info');
+    return student;
   } catch (error) {
     /**
      * Nếu bất cứ error nào xảy ra sẽ nhảy vào catch ngay
@@ -38,9 +39,10 @@ const main = async () => {
 };
 // Chú ý là với code gốc như vậy thì cả 2 axois sẽ được gởi lên và ko xác định được KQ Promise nào trả về trước
 /**
- * Khi sử dụng async await vào thì code trở thành đồng bộ -> phải chờ axios trước có await chạy xong mới tới axios thứ 2 
+ * Khi sử dụng async await vào thì code trở thành đồng bộ -> phải chờ axios trước có await chạy xong mới tới axios thứ 2
  */
-main();
+// main();
+console.log('main():', main());
 console.log('log after get info');
 // Bị log phía sau
 /**
@@ -50,3 +52,12 @@ console.log('log after get info');
  * Thì phải đứa 2 dòng code này vào trong 1 async func khác trước khi dùng await cho main
  * -> top level await problem
  */
+
+const studentResolve = main().then((mainRes) => {
+  console.log('mainRes:', mainRes);
+  // ??
+  return mainRes;
+});
+
+// nếu log ở đây lại bị vấn đề async và sẽ trả về Promise pending tiếp
+console.log('studentResolve:', studentResolve);
