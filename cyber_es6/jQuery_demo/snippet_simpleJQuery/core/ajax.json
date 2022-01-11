@@ -1,0 +1,8 @@
+{
+	"$.ajax": {
+		"prefix": "$.ajax",
+		"body": "$.ajax(\\{\r\n\t\turl: '${1}',\r\n\t\ttype: '${2:post}',\r\n\t\tdata: ${3:\\{\\}},\r\n\t\tsuccess: function (${4:data}) \\{\r\n\t\t\t${100:${4:data}}$0\r\n\t\t\\}\r\n\t\\});",
+		"description": "jQuery AJAX call",
+		"scope": "source.js,source.js.embedded.html"
+	}
+}

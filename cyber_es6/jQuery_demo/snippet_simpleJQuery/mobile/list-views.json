@@ -1,0 +1,50 @@
+{
+	"jqmdivider": {
+		"prefix": "jqmdivider",
+		"body": "\r\n<li data-role=\"list-divider\">${1}</li>\r\n",
+		"description": "jQuery Mobile: Listview divider",
+		"scope": "text.html"
+	},
+	"jqmlistview:cb": {
+		"prefix": "jqmlistview:cb",
+		"body": "\r\n<ul data-role=\"listview\">\r\n\t<li><a href=\"${1:#}\">${2:item1}<span class=\"ui-li-count\">${3:1}</span></a></li>\r\n\t<li><a href=\"${4:#}\">${5:item2}<span class=\"ui-li-count\">${6:2}</span></a></li>\r\n\t<li><a href=\"${7:#}\">${8:item3}<span class=\"ui-li-count\">${9:3}</span></a></li>\r\n</ul>\r\n",
+		"description": "jQuery Mobile: Listview with count bubbles",
+		"scope": "text.html"
+	},
+	"jqmlistview:f": {
+		"prefix": "jqmlistview:f",
+		"body": "\r\n<ul data-role=\"listview\" data-filter=\"true\">\r\n\t<li><a href=\"${1:#}\">${2:item1}</a></li>\r\n\t<li><a href=\"${3:#}\">${4:item2}</a></li>\r\n\t<li><a href=\"${5:#}\">${6:item3}</a></li>\r\n</ul>\r\n",
+		"description": "jQuery Mobile: Listview with filter",
+		"scope": "text.html"
+	},
+	"jqmlistview:i": {
+		"prefix": "jqmlistview:i",
+		"body": "\r\n<ul data-role=\"listview\" data-inset=\"true\">\r\n\t<li><a href=\"${1:#}\">${2:item1}</a></li>\r\n\t<li><a href=\"${3:#}\">${4:item2}</a></li>\r\n\t<li><a href=\"${5:#}\">${6:item3}</a></li>\r\n</ul>\r\n",
+		"description": "jQuery Mobile: Listview with inset",
+		"scope": "text.html"
+	},
+	"jqmlistview:n": {
+		"prefix": "jqmlistview:n",
+		"body": "\r\n<ol data-role=\"listview\">\r\n\t<li><a href=\"${1:#}\">${2:item1}</a></li>\r\n\t<li><a href=\"${3:#}\">${4:item2}</a></li>\r\n\t<li><a href=\"${5:#}\">${6:item3}</a></li>\r\n</ol>\r\n",
+		"description": "jQuery Mobile: Numbered listview",
+		"scope": "text.html"
+	},
+	"jqmlistview:r": {
+		"prefix": "jqmlistview:r",
+		"body": "\r\n<ul data-role=\"listview\">\r\n\t<li>${1:item1}</li>\r\n\t<li>${2:item2}</li>\r\n\t<li>${3:item3}</li>\r\n</ul>\r\n",
+		"description": "jQuery Mobile: Readonly listview",
+		"scope": "text.html"
+	},
+	"jqmlistview:t": {
+		"prefix": "jqmlistview:t",
+		"body": "\r\n<ul data-role=\"listview\">\r\n\t<li><a href=\"${1:#}\">${2:item1}</a></li>\r\n\t<li><a href=\"${3:#}\">${4:item2}</a></li>\r\n\t<li><a href=\"${5:#}\">${6:item3}</a></li>\r\n\t<ul data-role=\"listview\">\r\n\t\t<li>\r\n\t\t\t<img src=\"images/album-bb.jpg\" />\r\n\t\t\t<h3>Broken Bells</h3>\r\n\t\t\t<p>Broken Bells</p>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<img src=\"images/album-hc.jpg\" />\r\n\t\t\t<h3>Warning</h3>\r\n\t\t\t<p>Hot Chip</p>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<img src=\"images/album-p.jpg\" />\r\n\t\t\t<h3>Wolfgang Amadeus Phoenix</h3>\r\n\t\t\t<p>Phoenix</p>\r\n\t\t</li>\r\n\t</ul>\r\n</ul>",
+		"description": "jQuery Mobile: Basic listview",
+		"scope": "text.html"
+	},
+	"jqmlistview": {
+		"prefix": "jqmlistview",
+		"body": "\r\n<ul data-role=\"listview\">\r\n\t<li><a href=\"${1:#}\">${2:item1}</a></li>\r\n\t<li><a href=\"${3:#}\">${4:item2}</a></li>\r\n\t<li><a href=\"${5:#}\">${6:item3}</a></li>\r\n</ul>\r\n",
+		"description": "jQuery Mobile: Listview",
+		"scope": "text.html"
+	}
+}

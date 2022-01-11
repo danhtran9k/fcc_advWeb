@@ -1,0 +1,8 @@
+{
+	"selector": {
+		"prefix": "selector",
+		"body": "$('${1}')$0;",
+		"description": "A basic jQuery selector",
+		"scope": "source.js,source.js.embedded.html"
+	}
+}

@@ -1,0 +1,68 @@
+{
+	"jqmfieldcontain": {
+		"prefix": "jqmfieldcontain",
+		"body": "\r\n<div data-role=\"fieldcontain\">\r\n\t<fieldset data-role=\"controlgroup\">\r\n\t\t<legend>${1:Legend}</legend>\r\n\t\t${2}\r\n\t</fieldset>\r\n</div>\r\n",
+		"description": "jQuery Mobile: Field Contain",
+		"scope": "text.html"
+	},
+	"jqmsearch": {
+		"prefix": "jqmsearch",
+		"body": "\r\n<div data-role=\"fieldcontain\">\r\n\t<label for=\"${1}\">${2:label}</label>\r\n\t<input type=\"search\" name=\"${1}\" id=\"${1}\" value=\"\" />\r\n</div>\r\n",
+		"description": "jQuery Mobile: Search input",
+		"scope": "text.html"
+	},
+	"jqmselect": {
+		"prefix": "jqmselect",
+		"body": "\r\n<div data-role=\"fieldcontain\">\r\n\t<label for=\"${1:select}\" class=\"select\">Choose:</label>\r\n\t<select id=\"${1:select}\" name=\"${1:select}\" data-native-menu=\"false\">\r\n\t\t<option value=\"value1\">option1</option>\r\n\t\t<option value=\"value2\">option2</option>\r\n\t\t<option value=\"value3\">option3</option>\r\n\t</select>\r\n</div>\r\n",
+		"description": "jQuery Mobile: Select menu",
+		"scope": "text.html"
+	},
+	"jqmslider": {
+		"prefix": "jqmslider",
+		"body": "\r\n<div data-role=\"fieldcontain\">\r\n\t<label for=\"${1:slider}\">${2:label}</label>\r\n\t<input type=\"range\" name=\"${1:slider}\" id=\"${1:slider}\" value=\"${3:25}\" min=\"${4:0}\" max=\"${5:100}\" />\r\n</div>\r\n",
+		"description": "jQuery Mobile: Slider",
+		"scope": "text.html"
+	},
+	"jqmswitch": {
+		"prefix": "jqmswitch",
+		"body": "\r\n<label for=\"${1:flip}\">Select slider:</label>\r\n<select name=\"${1:flip}\" id=\"${1:flip}\" data-role=\"slider\">\r\n\t<option value=\"off\">${2:Off}</option>\r\n\t<option value=\"on\">${3:On}</option>\r\n</select>\r\n",
+		"description": "jQuery Mobile: Flip toggle switch",
+		"scope": "text.html"
+	},
+	"jqmtextarea": {
+		"prefix": "jqmtextarea",
+		"body": "\r\n<div data-role=\"fieldcontain\">\r\n\t<label for=\"${1}\">${2:label}</label>\r\n\t<textarea cols=\"40\" rows=\"8\" name=\"${1}\" id=\"${1}\"></textarea>\r\n</div>\r\n",
+		"description": "jQuery Mobile: Text area",
+		"scope": "text.html"
+	},
+	"jqminput:e": {
+		"prefix": "jqminput:e",
+		"body": "\r\n<div data-role=\"fieldcontain\">\r\n\t<label for=\"${1:email}\">${2:label}</label>\r\n\t<input type=\"email\" name=\"${1}\" id=\"${1}\" value=\"\" />\r\n</div>\r\n",
+		"description": "jQuery Mobile: Email input field",
+		"scope": "text.html"
+	},
+	"jqminput:n": {
+		"prefix": "jqminput:n",
+		"body": "\r\n<div data-role=\"fieldcontain\">\r\n\t<label for=\"${1:number}\">${2:label}</label>\r\n\t<input type=\"number\" name=\"${1}\" id=\"${1}\" value=\"\" />\r\n</div>\r\n",
+		"description": "jQuery Mobile: Number input field",
+		"scope": "text.html"
+	},
+	"jqminput:t": {
+		"prefix": "jqminput:t",
+		"body": "\r\n<div data-role=\"fieldcontain\">\r\n\t<label for=\"${1:telephone}\">${2:label}</label>\r\n\t<input type=\"tel\" name=\"${1}\" id=\"${1}\" value=\"\" />\r\n</div>\r\n",
+		"description": "jQuery Mobile: Telephone input field",
+		"scope": "text.html"
+	},
+	"jqminput:u": {
+		"prefix": "jqminput:u",
+		"body": "\r\n<div data-role=\"fieldcontain\">\r\n\t<label for=\"${1:url}\">${2:label}</label>\r\n\t<input type=\"url\" name=\"${1}\" id=\"${1}\" value=\"\" />\r\n</div>\r\n",
+		"description": "jQuery Mobile: Url input field",
+		"scope": "text.html"
+	},
+	"jqminput": {
+		"prefix": "jqminput",
+		"body": "\r\n<div data-role=\"fieldcontain\">\r\n\t<label for=\"${1}\">${2:label}</label>\r\n\t<input type=\"text\" name=\"${1}\" id=\"${1}\" value=\"\" />\r\n</div>\r\n",
+		"description": "jQuery Mobile: Text field",
+		"scope": "text.html"
+	}
+}

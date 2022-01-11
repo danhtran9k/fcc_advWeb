@@ -1,0 +1,8 @@
+{
+	"jquery-plugin-min": {
+		"prefix": "jquery-plugin-min",
+		"body": "\r\n$.fn.extend\r\n  ${1:bobIsMyUncle}: (options) ->\r\n    settings = {}\r\n    settings = $.extend settings, options\r\n\r\n    @each ()->\r\n      ${2:$(@).replace '<div style=\"background: red; padding: 10px; color: #ff0000;\">Bob\\'s your uncle.</div>'}\r\n\r\n# You might use it like this:\r\n$ ->\r\n  $('[data-behavior=\"${1:bobIsMyUncle}\"]').${1:bobIsMyUncle}()",
+		"description": "jQuery Plugin",
+		"scope": "source.coffee"
+	}
+}

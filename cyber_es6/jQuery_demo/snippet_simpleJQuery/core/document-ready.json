@@ -1,0 +1,8 @@
+{
+	"$ready": {
+		"prefix": "$ready",
+		"body": "$(function () \\{\r\n\t$0\r\n\\});",
+		"description": "jQuery ready function",
+		"scope": "source.js,source.js.embedded.html"
+	}
+}

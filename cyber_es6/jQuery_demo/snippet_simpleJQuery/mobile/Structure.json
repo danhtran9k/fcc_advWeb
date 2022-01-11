@@ -1,0 +1,50 @@
+{
+	"jqmcontent": {
+		"prefix": "jqmcontent",
+		"body": "\r\n<article data-role=\"content\">\r\n\t<p>${1:Content}</p>\r\n</article><!-- /content -->\r\n",
+		"description": "jQuery Mobile: Semantic content",
+		"scope": "text.html"
+	},
+	"jqmfooter:f": {
+		"prefix": "jqmfooter:f",
+		"body": "\r\n<footer data-role=\"footer\" data-position=\"fixed\">\r\n\t<h1>${1:Footer}</h1>\r\n</footer>\r\n",
+		"description": "jQuery Mobile: Fixed footer",
+		"scope": "text.html"
+	},
+	"jqmfooter": {
+		"prefix": "jqmfooter",
+		"body": "\r\n<footer data-role=\"footer\">\r\n\t<h1>${1:Footer}</h1>\r\n</footer><!-- /footer -->\r\n",
+		"description": "jQuery Mobile: Semantic footer",
+		"scope": "text.html"
+	},
+	"jqmheader:f": {
+		"prefix": "jqmheader:f",
+		"body": "\r\n<header data-role=\"header\" data-position=\"fixed\">\r\n\t<h1>${1:Header}</h1>\r\n</header>\r\n",
+		"description": "jQuery Mobile: Fixed header",
+		"scope": "text.html"
+	},
+	"jqmheader:i": {
+		"prefix": "jqmheader:i",
+		"body": "\r\n<header data-role=\"header\" data-position=\"inline\">\r\n\t<a href=\"#\" data-icon=\"delete\">Cancel</a>\r\n\t<h1>${1:Header}</h1>\r\n\t<a href=\"#\" data-icon=\"gear\">Help</a>\r\n</header><!-- /header -->\r\n",
+		"description": "jQuery Mobile: Semantic inline header",
+		"scope": "text.html"
+	},
+	"jqmheader": {
+		"prefix": "jqmheader",
+		"body": "\r\n<header data-role=\"header\">\r\n\t<h1>${1:Header}</h1>\r\n</header><!-- /header -->\r\n",
+		"description": "jQuery Mobile: Semantic header",
+		"scope": "text.html"
+	},
+	"jqmnavbar": {
+		"prefix": "jqmnavbar",
+		"body": "\r\n<nav data-role=\"navbar\">${1}</nav>\r\n",
+		"description": "jQuery Mobile: Navigation bar",
+		"scope": "text.html"
+	},
+	"jqmpage": {
+		"prefix": "jqmpage",
+		"body": "\r\n<section id=\"${1:page}\" data-role=\"page\">\r\n\t<header data-role=\"header\">\r\n\t\t<h1>${2:Header}</h1>\r\n\t</header><!-- /header -->\r\n\t<article data-role=\"content\">\r\n\t\t<p>${3:Content}</p>\r\n\t</article><!-- /content -->\r\n\t<footer data-role=\"footer\">\r\n\t\t<h1>${4:Footer}</h1>\r\n\t</footer><!-- /footer -->\r\n</section><!-- /page -->\r\n",
+		"description": "jQuery Mobile: Basic semantic page",
+		"scope": "text.html"
+	}
+}

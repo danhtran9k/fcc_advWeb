@@ -1,0 +1,38 @@
+{
+	"jqmcollapsibleset": {
+		"prefix": "jqmcollapsibleset",
+		"body": "\r\n<div data-role=\"collapsible-set\">\r\n\t<div data-role=\"collapsible\" data-collapsed=\"false\">\r\n\t\t<h3>${1:Section 1}</h3>\r\n\t\t<p>${2:Collapsible content markup 1}</p>\r\n\t</div>\r\n\t<div data-role=\"collapsible\">\r\n\t\t<h3>${3:Section 2}</h3>\r\n\t\t<p>${4:Collapsible content markup 2}</p>\r\n\t</div>\r\n\t<div data-role=\"collapsible\">\r\n\t\t<h3>${5:Section 3}</h3>\r\n\t\t<p>${6:Collapsible content markup 3}</p>\r\n\t</div>\r\n</div>",
+		"description": "jQuery Mobile: Collapsible sets (accordions)",
+		"scope": "text.html"
+	},
+	"jqmcollapsible": {
+		"prefix": "jqmcollapsible",
+		"body": "\r\n<div data-role=\"collapsible\">\r\n\t<h3>${1:Collapsible header}</h3>\r\n\t<p>${2:Collapsible content markup}</p>\r\n</div>\r\n",
+		"description": "jQuery Mobile: Collapsible content markup",
+		"scope": "text.html"
+	},
+	"jqmgrida": {
+		"prefix": "jqmgrida",
+		"body": "\r\n<div class=\"ui-grid-a\">\r\n\t<div class=\"ui-block-a\">${1:column1}</div>\r\n\t<div class=\"ui-block-b\">${2:column2}</div>\r\n</div>\r\n",
+		"description": "jQuery Mobile: Two column grid",
+		"scope": "text.html"
+	},
+	"jqmgridb": {
+		"prefix": "jqmgridb",
+		"body": "\r\n<div class=\"ui-grid-b\">\r\n\t<div class=\"ui-block-a\">${1:column1}</div>\r\n\t<div class=\"ui-block-b\">${2:column2}</div>\r\n\t<div class=\"ui-block-c\">${3:column3}</div>\r\n</div>\r\n",
+		"description": "jQuery Mobile: Three column grid",
+		"scope": "text.html"
+	},
+	"jqmgridc": {
+		"prefix": "jqmgridc",
+		"body": "\r\n<div class=\"ui-grid-c\">\r\n\t<div class=\"ui-block-a\">${1:column1}</div>\r\n\t<div class=\"ui-block-b\">${2:column2}</div>\r\n\t<div class=\"ui-block-c\">${3:column3}</div>\r\n\t<div class=\"ui-block-d\">${4:column4}</div>\r\n</div>\r\n",
+		"description": "jQuery Mobile: Four column grid",
+		"scope": "text.html"
+	},
+	"jqmgridd": {
+		"prefix": "jqmgridd",
+		"body": "\r\n<div class=\"ui-grid-d\">\r\n\t<div class=\"ui-block-a\">${1:column1}</div>\r\n\t<div class=\"ui-block-b\">${2:column2}</div>\r\n\t<div class=\"ui-block-c\">${3:column3}</div>\r\n\t<div class=\"ui-block-d\">${4:column4}</div>\r\n\t<div class=\"ui-block-e\">${5:column5}</div>\r\n</div>",
+		"description": "jQuery Mobile: Five column grid",
+		"scope": "text.html"
+	}
+}

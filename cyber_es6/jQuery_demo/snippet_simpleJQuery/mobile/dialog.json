@@ -1,0 +1,8 @@
+{
+	"jqmdialog": {
+		"prefix": "jqmdialog",
+		"body": "\r\n<a href=\"${1:#}\" data-role=\"button\" data-inline=\"true\" data-rel=\"dialog\" data-transition=\"pop\">${2:Open dialog}</a>\r\n",
+		"description": "jQuery Mobile: Dialog",
+		"scope": "text.html"
+	}
+}

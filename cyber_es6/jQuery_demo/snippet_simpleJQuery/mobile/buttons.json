@@ -1,0 +1,32 @@
+{
+	"jqmnbutton": {
+		"prefix": "jqmnbutton",
+		"body": "\r\n<a href=\"${1:#}\" data-role=\"button\">${2:button}</a>\r\n",
+		"description": "jQuery Mobile: Link button",
+		"scope": "text.html"
+	},
+	"jqmcontrolgroup": {
+		"prefix": "jqmcontrolgroup",
+		"body": "\r\n<div data-role=\"controlgroup\">\r\n\t<a href=\"${1:#}\" data-role=\"button\">${2:button1}</a>\r\n\t<a href=\"${3:#}\" data-role=\"button\">${4:button2}</a>\r\n\t<a href=\"${5:#}\" data-role=\"button\">${6:button3}</a>\r\n</div>\r\n",
+		"description": "jQuery Mobile: Control group buttons",
+		"scope": "text.html"
+	},
+	"jqmcontrolgroup:h": {
+		"prefix": "jqmcontrolgroup:h",
+		"body": "\r\n<div data-role=\"controlgroup\" data-type=\"horizontal\">\r\n\t<a href=\"${1:#}\" data-role=\"button\">${2:button1}</a>\r\n\t<a href=\"${3:#}\" data-role=\"button\">${4:button2}</a>\r\n\t<a href=\"${5:#}\" data-role=\"button\">${6:button3}</a>\r\n</div>\r\n",
+		"description": "jQuery Mobile: Horizontal control group buttons",
+		"scope": "text.html"
+	},
+	"jqmnbutton:i": {
+		"prefix": "jqmnbutton:i",
+		"body": "\r\n<a href=\"${1:#}\" data-role=\"button\" data-icon=\"${2:home}\">${3:button}</a>\r\n",
+		"description": "jQuery Mobile: Link button with an icon",
+		"scope": "text.html"
+	},
+	"jqmnbutton:ip": {
+		"prefix": "jqmnbutton:ip",
+		"body": "\r\n<a href=\"${1:#}\" data-role=\"button\" data-icon=\"${2:home}\" data-iconpos=\"${3:right}\">${4:button}</a>\r\n",
+		"description": "jQuery Mobile: Link button with a positioned icon",
+		"scope": "text.html"
+	}
+}
