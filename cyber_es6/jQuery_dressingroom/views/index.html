@@ -22,16 +22,16 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-12">
           <div class="card">
             <div class="text-center">
-              <img src="./../assets/images/cybersoft.png" alt="Card image" />
+              <img src="./../assets/images/320_logo.svg.png" alt="Card image" />
             </div>
 
             <div class="card-body">
               <h4 class="card-title text-center">
-                CyberLearn - Học lập trình trực tuyến - Dự án thử đồ trực tuyến
-                - Virtual Dressing Room
+                Built with jQuery - Dự án thử đồ trực tuyến - Virtual Dressing
+                Room
               </h4>
             </div>
           </div>
@@ -40,10 +40,11 @@
       </div>
       <div class="row">
         <div class="col-md-8">
+          <!-- https://getbootstrap.com/docs/4.4/components/navs/#javascript-behavior -->
           <ul class="nav nav-pills">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a
-                class="nav-link active  btn-default"
+                class="nav-link active btn-default"
                 data-toggle="pill"
                 href="#tabTopClothes"
                 >Áo</a
@@ -51,7 +52,7 @@
             </li>
             <li class="nav-item">
               <a
-                class="nav-link  btn-default"
+                class="nav-link btn-default"
                 data-toggle="pill"
                 href="#tabBotClothes"
                 >Quần</a
@@ -81,7 +82,7 @@
               <a class="nav-link" data-toggle="pill" href="#tabBackground"
                 >Nền</a
               >
-            </li>
+            </li> -->
           </ul>
 
           <div class="well">
@@ -194,5 +195,10 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./../models/ListChosen.js"></script>
+    <script src="./../models/ChoseItem.js"></script>
+    <script src="./../utils/callData.js"></script>
+    <script src="./../controllers/main.js"></script>
   </body>
 </html>
