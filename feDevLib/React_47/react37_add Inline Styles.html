@@ -1,0 +1,91 @@
+<!-- /*
+
+==================================================================
+LINK
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/react/add-inline-styles-in-react
+
+==================================================================
+DESCRIPTION
+
+Add Inline Styles in React
+You may have noticed in the last challenge that there were several other syntax differences from HTML inline styles in addition to the style attribute set to a JavaScript object. First, the names of certain CSS style properties use camel case. For example, the last challenge set the size of the font with fontSize instead of font-size. Hyphenated words like font-size are invalid syntax for JavaScript object properties, so React uses camel case. As a rule, any hyphenated style properties are written using camel case in JSX.
+
+All property value length units (like height, width, and fontSize) are assumed to be in px unless otherwise specified. If you want to use em, for example, you wrap the value and the units in quotes, like {fontSize: "4em"}. Other than the length values that default to px, all other property values should be wrapped in quotes.
+
+If you have a large set of styles, you can assign a style object to a constant to keep your code organized. Declare your styles constant as a global variable at the top of the file. Initialize styles constant and assign an object with three style properties and their values to it. Give the div a color of purple, a font-size of 40, and a border of 2px solid purple. Then set the style attribute equal to the styles constant.
+
+==================================================================
+TESTCASE
+
+The styles variable should be an object with three properties.
+
+The styles variable should have a color property set to a value of purple.
+
+The styles variable should have a fontSize property set to a value of 40.
+
+The styles variable should have a border property set to a value of 2px solid purple.
+
+The component should render a div element.
+
+The div element should have its styles defined by the styles object.
+
+==================================================================
+SETUP
+
+// Change code above this line
+class Colorful extends React.Component {
+  render() {
+    // Change code below this line
+    return (
+      <div style={{color: "yellow", fontSize: 24}}>Style Me!</div>
+    );
+    // Change code above this line
+  }
+};
+
+==================================================================
+
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+      // Change code above this line
+      class Colorful extends React.Component {
+        render() {
+          // Change code below this line
+          return <div style={{ color: 'yellow', fontSize: 24 }}>Style Me!</div>;
+          // Change code above this line
+        }
+      }
+
+      function App() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+      
+      // ====================================================
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>

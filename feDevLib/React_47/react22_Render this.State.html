@@ -1,0 +1,109 @@
+<!-- /*
+
+==================================================================
+LINK
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/react/render-state-in-the-user-interface
+
+==================================================================
+DESCRIPTION
+
+Render State in the User Interface
+Once you define a component's initial state, you can display any part of it in the UI that is rendered. If a component is stateful, it will always have access to the data in state in its render() method. You can access the data with this.state.
+
+If you want to access a state value within the return of the render method, you have to enclose the value in curly braces.
+
+state is one of the most powerful features of components in React. It allows you to track important data in your app and render a UI in response to changes in this data. If your data changes, your UI will change. React uses what is called a virtual DOM, to keep track of changes behind the scenes. When state data updates, it triggers a re-render of the components using that data - including child components that received the data as a prop. React updates the actual DOM, but only where necessary. This means you don't have to worry about changing the DOM. You simply declare what the UI should look like.
+
+Note that if you make a component stateful, no other components are aware of its state. Its state is completely encapsulated, or local to that component, unless you pass state data to a child component as props. This notion of encapsulated state is very important because it allows you to write certain logic, then have that logic contained and isolated in one place in your code.
+
+In the code editor, MyComponent is already stateful. Define an h1 tag in the component's render method which renders the value of name from the component's state.
+
+Note: The h1 should only render the value from state and nothing else. In JSX, any code you write with curly braces { } will be treated as JavaScript. So to access the value from state just enclose the reference in curly braces.
+
+==================================================================
+TESTCASE
+
+MyComponent should have a key name with value freeCodeCamp stored in its state.
+
+MyComponent should render an h1 heading element enclosed in a single div.
+
+The rendered h1 heading element should only contain text rendered from the component's state.
+
+==================================================================
+SETUP
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'freeCodeCamp'
+    }
+  }
+  render() {
+    return (
+      <div>
+        { /* Change code below this line */ }
+
+        { /* Change code above this line */ }
+      </div>
+    );
+  }
+};
+
+==================================================================
+
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+      class MyComponent extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            name: 'freeCodeCamp',
+          };
+        }
+        render() {
+          return (
+            <div>
+              {/* Change code below this line */}
+
+              {/* Change code above this line */}
+            </div>
+          );
+        }
+      }
+
+
+      function App() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+      
+      
+      // ====================================================
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>

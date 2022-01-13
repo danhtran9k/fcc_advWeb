@@ -1,0 +1,90 @@
+<!-- /*
+
+==================================================================
+LINK
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/react/use-the-lifecycle-method-componentwillmount
+
+==================================================================
+DESCRIPTION
+
+Use the Lifecycle Method componentWillMount
+React components have several special methods that provide opportunities to perform actions at specific points in the lifecycle of a component. These are called lifecycle methods, or lifecycle hooks, and allow you to catch components at certain points in time. This can be before they are rendered, before they update, before they receive props, before they unmount, and so on. Here is a list of some of the main lifecycle methods: componentWillMount() componentDidMount() shouldComponentUpdate() componentDidUpdate() componentWillUnmount() The next several lessons will cover some of the basic use cases for these lifecycle methods.
+
+Note: The componentWillMount Lifecycle method will be deprecated in a future version of 16.X and removed in version 17. (Source)
+
+The componentWillMount() method is called before the render() method when a component is being mounted to the DOM. Log something to the console within componentWillMount() - you may want to have your browser console open to see the output.
+
+==================================================================
+TESTCASE
+
+MyComponent should render a div element.
+
+console.log should be called in componentWillMount.
+
+==================================================================
+SETUP
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  componentWillMount() {
+    // Change code below this line
+
+    // Change code above this line
+  }
+  render() {
+    return <div />
+  }
+};
+
+==================================================================
+
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+      class MyComponent extends React.Component {
+        constructor(props) {
+          super(props);
+        }
+        componentWillMount() {
+          // Change code below this line
+          // Change code above this line
+        }
+        render() {
+          return <div />;
+        }
+      }
+
+      function App() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+      
+      // ====================================================
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>

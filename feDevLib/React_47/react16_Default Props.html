@@ -1,0 +1,80 @@
+<!-- /*
+
+==================================================================
+LINK
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/react/use-default-props
+
+==================================================================
+DESCRIPTION
+
+Use Default Props
+React also has an option to set default props. You can assign default props to a component as a property on the component itself and React assigns the default prop if necessary. This allows you to specify what a prop value should be if no value is explicitly provided. For example, if you declare MyComponent.defaultProps = { location: 'San Francisco' }, you have defined a location prop that's set to the string San Francisco, unless you specify otherwise. React assigns default props if props are undefined, but if you pass null as the value for a prop, it will remain null.
+
+The code editor shows a ShoppingCart component. Define default props on this component which specify a prop items with a value of 0.
+
+==================================================================
+TESTCASE
+
+The ShoppingCart component should render.
+
+The ShoppingCart component should have a default prop of { items: 0 }.
+
+==================================================================
+SETUP
+
+const ShoppingCart = (props) => {
+  return (
+    <div>
+      <h1>Shopping Cart Component</h1>
+    </div>
+  )
+};
+// Change code below this line
+
+==================================================================
+
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+      const ShoppingCart = (props) => {
+        return (
+          <div>
+            <h1>Shopping Cart Component</h1>
+          </div>
+        );
+      };
+      // Change code below this line
+
+      
+      function App() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+      
+      // ====================================================
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>

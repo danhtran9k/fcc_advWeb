@@ -1,0 +1,126 @@
+<!-- /*
+
+==================================================================
+LINK
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/react/write-a-simple-counter
+
+==================================================================
+DESCRIPTION
+
+Write a Simple Counter
+You can design a more complex stateful component by combining the concepts covered so far. These include initializing state, writing methods that set state, and assigning click handlers to trigger these methods.
+
+The Counter component keeps track of a count value in state. There are two buttons which call methods increment() and decrement(). Write these methods so the counter value is incremented or decremented by 1 when the appropriate button is clicked. Also, create a reset() method so when the reset button is clicked, the count is set to 0.
+
+Note: Make sure you don't modify the classNames of the buttons. Also, remember to add the necessary bindings for the newly-created methods in the constructor.
+
+==================================================================
+TESTCASE
+
+Counter should return a div element which contains three buttons with text content in this order Increment!, Decrement!, Reset.
+
+The state of Counter should initialize with a count property set to 0.
+
+Clicking the increment button should increment the count by 1.
+
+Clicking the decrement button should decrement the count by 1.
+
+Clicking the reset button should reset the count to 0.
+
+==================================================================
+SETUP
+
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+    // Change code below this line
+
+    // Change code above this line
+  }
+  // Change code below this line
+
+  // Change code above this line
+  render() {
+    return (
+      <div>
+        <button className='inc' onClick={this.increment}>Increment!</button>
+        <button className='dec' onClick={this.decrement}>Decrement!</button>
+        <button className='reset' onClick={this.reset}>Reset</button>
+        <h1>Current Count: {this.state.count}</h1>
+      </div>
+    );
+  }
+};
+
+==================================================================
+
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+      class Counter extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            count: 0,
+          };
+          // Change code below this line
+
+          // Change code above this line
+        }
+        // Change code below this line
+
+        // Change code above this line
+        render() {
+          return (
+            <div>
+              <button className="inc" onClick={this.increment}>
+                Increment!
+              </button>
+              <button className="dec" onClick={this.decrement}>
+                Decrement!
+              </button>
+              <button className="reset" onClick={this.reset}>
+                Reset
+              </button>
+              <h1>Current Count: {this.state.count}</h1>
+            </div>
+          );
+        }
+      }
+
+      function App() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+      
+      
+      // ====================================================
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!-- /*
+
+==================================================================
+LINK
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/react/give-sibling-elements-a-unique-key-attribute
+
+==================================================================
+DESCRIPTION
+
+Give Sibling Elements a Unique Key Attribute
+The last challenge showed how the map method is used to dynamically render a number of elements based on user input. However, there was an important piece missing from that example. When you create an array of elements, each one needs a key attribute set to a unique value. React uses these keys to keep track of which items are added, changed, or removed. This helps make the re-rendering process more efficient when the list is modified in any way.
+
+Note: Keys only need to be unique between sibling elements, they don't need to be globally unique in your application.
+
+The code editor has an array with some front end frameworks and a stateless functional component named Frameworks(). Frameworks() needs to map the array to an unordered list, much like in the last challenge. Finish writing the map callback to return an li element for each framework in the frontEndFrameworks array. This time, make sure to give each li a key attribute, set to a unique value. The li elements should also contain text from frontEndFrameworks.
+
+Normally, you want to make the key something that uniquely identifies the element being rendered. As a last resort the array index may be used, but typically you should try to use a unique identification.
+
+==================================================================
+TESTCASE
+
+The Frameworks component should exist and render to the page.
+
+Frameworks should render an h1 element.
+
+Frameworks should render a ul element.
+
+The ul tag should render 6 child li elements.
+
+Each list item element should have a unique key attribute.
+
+Each list item element should contain text from frontEndFrameworks.
+
+==================================================================
+SETUP
+
+const frontEndFrameworks = [
+  'React',
+  'Angular',
+  'Ember',
+  'Knockout',
+  'Backbone',
+  'Vue'
+];
+
+function Frameworks() {
+  const renderFrameworks = null; // Change this line
+  return (
+    <div>
+      <h1>Popular Front End JavaScript Frameworks</h1>
+      <ul>
+        {renderFrameworks}
+      </ul>
+    </div>
+  );
+};
+
+==================================================================
+
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+      const frontEndFrameworks = [
+        'React',
+        'Angular',
+        'Ember',
+        'Knockout',
+        'Backbone',
+        'Vue',
+      ];
+
+      function Frameworks() {
+        const renderFrameworks = null; // Change this line
+        return (
+          <div>
+            <h1>Popular Front End JavaScript Frameworks</h1>
+            <ul>{renderFrameworks}</ul>
+          </div>
+        );
+      }
+      
+      // ====================================================
+      
+      function App() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+      
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!-- /*
+
+==================================================================
+LINK
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/react/write-a-react-component-from-scratch
+
+==================================================================
+DESCRIPTION
+
+Write a React Component from Scratch
+Now that you've learned the basics of JSX and React components, it's time to write a component on your own. React components are the core building blocks of React applications so it's important to become very familiar with writing them. Remember, a typical React component is an ES6 class which extends React.Component. It has a render method that returns HTML (from JSX) or null. This is the basic form of a React component. Once you understand this well, you will be prepared to start building more complex React projects.
+
+Define a class MyComponent that extends React.Component. Its render method should return a div that contains an h1 tag with the text: My First React Component! in it. Use this text exactly, the case and punctuation matter. Make sure to call the constructor for your component, too.
+
+Render this component to the DOM using ReactDOM.render(). There is a div with id='challenge-node' available for you to use.
+
+==================================================================
+TESTCASE
+
+There should be a React component called MyComponent.
+
+MyComponent should contain an h1 tag with text My First React Component! Case and punctuation matter.
+
+MyComponent should render to the DOM.
+
+MyComponent should have a constructor calling super with props.
+
+==================================================================
+SETUP
+
+// Change code below this line
+
+==================================================================
+
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+      // Change code below this line
+
+
+      function App() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+      
+      
+      // ====================================================
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>

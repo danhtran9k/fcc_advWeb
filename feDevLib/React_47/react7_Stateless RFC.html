@@ -1,0 +1,94 @@
+<!-- /*
+
+==================================================================
+LINK
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/react/create-a-stateless-functional-component
+
+==================================================================
+DESCRIPTION
+
+Create a Stateless Functional Component
+Components are the core of React. Everything in React is a component and here you will learn how to create one.
+
+There are two ways to create a React component. The first way is to use a JavaScript function. Defining a component in this way creates a stateless functional component. The concept of state in an application will be covered in later challenges. For now, think of a stateless component as one that can receive data and render it, but does not manage or track changes to that data. (We'll cover the second way to create a React component in the next challenge.)
+
+To create a component with a function, you simply write a JavaScript function that returns either JSX or null. One important thing to note is that React requires your function name to begin with a capital letter. Here's an example of a stateless functional component that assigns an HTML class in JSX:
+
+const DemoComponent = function() {
+  return (
+    <div className='customClass' />
+  );
+};
+After being transpiled, the <div> will have a CSS class of customClass.
+
+Because a JSX component represents HTML, you could put several components together to create a more complex HTML page. This is one of the key advantages of the component architecture React provides. It allows you to compose your UI from many separate, isolated components. This makes it easier to build and maintain complex user interfaces.
+
+The code editor has a function called MyComponent. Complete this function so it returns a single div element which contains some string of text.
+
+Note: The text is considered a child of the div element, so you will not be able to use a self-closing tag.
+
+==================================================================
+TESTCASE
+
+MyComponent should return JSX.
+
+MyComponent should return a div element.
+
+The div element should contain a string of text.
+
+==================================================================
+SETUP
+
+const MyComponent = function() {
+  // Change code below this line
+
+
+
+  // Change code above this line
+}
+
+==================================================================
+
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+
+      const MyComponent = function () {
+        // Change code below this line
+
+        // Change code above this line
+      };
+
+      
+      function App() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+
+      // ====================================================
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>

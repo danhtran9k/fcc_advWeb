@@ -1,0 +1,83 @@
+<!-- /*
+
+==================================================================
+LINK
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/react/add-comments-in-jsx
+
+==================================================================
+DESCRIPTION
+
+Add Comments in JSX
+JSX is a syntax that gets compiled into valid JavaScript. Sometimes, for readability, you might need to add comments to your code. Like most programming languages, JSX has its own way to do this.
+
+To put comments inside JSX, you use the syntax {/* */} to wrap around the comment text.
+
+The code editor has a JSX element similar to what you created in the last challenge. Add a comment somewhere within the provided div element, without modifying the existing h1 or p elements.
+
+==================================================================
+TESTCASE
+
+The constant JSX should return a div element.
+
+The div should contain an h1 tag as the first element.
+
+The div should contain a p tag as the second element.
+
+The existing h1 and p elements should not be modified.
+
+The JSX should use valid comment syntax.
+
+==================================================================
+SETUP
+
+const JSX = (
+  <div>
+    <h1>This is a block of JSX</h1>
+    <p>Here's a subtitle</p>
+  </div>
+);
+
+==================================================================
+
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+      const JSX = (
+        <div>
+          <h1>This is a block of JSX</h1>
+          <p>Here's a subtitle</p>
+        </div>
+      );
+
+      function App() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+
+      // ====================================================
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>

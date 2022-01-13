@@ -1,0 +1,118 @@
+<!-- /*
+
+==================================================================
+LINK
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/react/render-with-an-if-else-condition
+
+==================================================================
+DESCRIPTION
+
+Render with an If-Else Condition
+Another application of using JavaScript to control your rendered view is to tie the elements that are rendered to a condition. When the condition is true, one view renders. When it's false, it's a different view. You can do this with a standard if/else statement in the render() method of a React component.
+
+MyComponent contains a boolean in its state which tracks whether you want to display some element in the UI or not. The button toggles the state of this value. Currently, it renders the same UI every time. Rewrite the render() method with an if/else statement so that if display is true, you return the current markup. Otherwise, return the markup without the h1 element.
+
+Note: You must write an if/else to pass the tests. Use of the ternary operator will not pass here.
+
+==================================================================
+TESTCASE
+
+MyComponent should exist and render.
+
+When display is set to true, a div, button, and h1 should render.
+
+When display is set to false, only a div and button should render.
+
+The render method should use an if/else statement to check the condition of this.state.display.
+
+==================================================================
+SETUP
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: true
+    }
+    this.toggleDisplay = this.toggleDisplay.bind(this);
+  }
+  toggleDisplay() {
+    this.setState((state) => ({
+      display: !state.display
+    }));
+  }
+  render() {
+    // Change code below this line
+
+    return (
+       <div>
+         <button onClick={this.toggleDisplay}>Toggle Display</button>
+         <h1>Displayed!</h1>
+       </div>
+    );
+  }
+};
+
+==================================================================
+
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+      class MyComponent extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            display: true,
+          };
+          this.toggleDisplay = this.toggleDisplay.bind(this);
+        }
+        toggleDisplay() {
+          this.setState((state) => ({
+            display: !state.display,
+          }));
+        }
+        render() {
+          // Change code below this line
+
+          return (
+            <div>
+              <button onClick={this.toggleDisplay}>Toggle Display</button>
+              <h1>Displayed!</h1>
+            </div>
+          );
+        }
+      }
+
+      // ====================================================
+      
+      function App() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+      
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>

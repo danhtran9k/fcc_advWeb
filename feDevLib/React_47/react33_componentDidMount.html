@@ -1,0 +1,117 @@
+<!-- /*
+
+==================================================================
+LINK
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/react/use-the-lifecycle-method-componentdidmount
+
+==================================================================
+DESCRIPTION
+
+Use the Lifecycle Method componentDidMount
+Most web developers, at some point, need to call an API endpoint to retrieve data. If you're working with React, it's important to know where to perform this action.
+
+The best practice with React is to place API calls or any calls to your server in the lifecycle method componentDidMount(). This method is called after a component is mounted to the DOM. Any calls to setState() here will trigger a re-rendering of your component. When you call an API in this method, and set your state with the data that the API returns, it will automatically trigger an update once you receive the data.
+
+There is a mock API call in componentDidMount(). It sets state after 2.5 seconds to simulate calling a server to retrieve data. This example requests the current total active users for a site. In the render method, render the value of activeUsers in the h1 after the text Active Users:. Watch what happens in the preview, and feel free to change the timeout to see the different effects.
+
+
+
+==================================================================
+TESTCASE
+
+MyComponent should render a div element which wraps an h1 tag.
+
+Component state should be updated with a timeout function in componentDidMount.
+
+The h1 tag should render the activeUsers value from MyComponent's state.
+
+==================================================================
+SETUP
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeUsers: null
+    };
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        activeUsers: 1273
+      });
+    }, 2500);
+  }
+  render() {
+    return (
+      <div>
+        {/* Change code below this line */}
+        <h1>Active Users: </h1>
+        {/* Change code above this line */}
+      </div>
+    );
+  }
+}
+
+==================================================================
+
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+      class MyComponent extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            activeUsers: null,
+          };
+        }
+        componentDidMount() {
+          setTimeout(() => {
+            this.setState({
+              activeUsers: 1273,
+            });
+          }, 2500);
+        }
+        render() {
+          return (
+            <div>
+              {/* Change code below this line */}
+              <h1>Active Users: </h1>
+              {/* Change code above this line */}
+            </div>
+          );
+        }
+      }
+      // ====================================================
+      
+      function App() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+      
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>

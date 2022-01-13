@@ -1,0 +1,109 @@
+<!-- /*
+
+==================================================================
+LINK
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/react/override-default-props
+
+==================================================================
+DESCRIPTION
+
+Override Default Props
+The ability to set default props is a useful feature in React. The way to override the default props is to explicitly set the prop values for a component.
+
+The ShoppingCart component now renders a child component Items. This Items component has a default prop quantity set to the integer 0. Override the default prop by passing in a value of 10 for quantity.
+
+Note: Remember that the syntax to add a prop to a component looks similar to how you add HTML attributes. However, since the value for quantity is an integer, it won't go in quotes but it should be wrapped in curly braces. For example, {100}. This syntax tells JSX to interpret the value within the braces directly as JavaScript.
+
+
+
+==================================================================
+TESTCASE
+
+The component ShoppingCart should render.
+
+The component Items should render.
+
+The Items component should have a prop of { quantity: 10 } passed from the ShoppingCart component.
+
+==================================================================
+SETUP
+
+const Items = (props) => {
+  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+}
+
+Items.defaultProps = {
+  quantity: 0
+}
+
+class ShoppingCart extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    { /* Change code below this line */ }
+    return <Items />
+    { /* Change code above this line */ }
+  }
+};
+
+==================================================================
+
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+      const Items = (props) => {
+        return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>;
+      };
+
+      Items.defaultProps = {
+        quantity: 0,
+      };
+
+      class ShoppingCart extends React.Component {
+        constructor(props) {
+          super(props);
+        }
+        render() {
+          {
+            /* Change code below this line */
+          }
+          return <Items />;
+          {
+            /* Change code above this line */
+          }
+        }
+      }
+      
+      function App() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+      
+      // ====================================================
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>
