@@ -156,7 +156,7 @@ SETUP
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <form action="https://freecatphotoapp.com/submit-cat-photo">
+  <form class="forn-control" action="https://freecatphotoapp.com/submit-cat-photo">
     <div class="row">
       <div class="col-xs-6">
         <label><input type="radio" name="indoor-outdoor"> Indoor</label>
@@ -176,7 +176,9 @@ SETUP
         <label><input type="checkbox" name="personality"> Crazy</label>
       </div>
     </div>
-    <input type="text" placeholder="cat photo URL" required>
-    <button type="submit">Submit</button>
+    <input class="form-control" type="text" placeholder="cat photo URL" required>
+    <button type="submit" class="btn btn-primary">
+      <i class="fa fa-paper-plane"></i>Submit
+    </button>
   </form>
 </div>
