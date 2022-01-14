@@ -85,7 +85,9 @@ function Frameworks() {
       ];
 
       function Frameworks() {
-        const renderFrameworks = null; // Change this line
+        const renderFrameworks = frontEndFrameworks.map((el, index) => (
+          <li key={index}>{el}</li>
+        )); // Change this line
         return (
           <div>
             <h1>Popular Front End JavaScript Frameworks</h1>
@@ -93,17 +95,17 @@ function Frameworks() {
           </div>
         );
       }
-      
+
       // ====================================================
-      
+
       function App() {
         return (
           <div>
-            
+            <Frameworks />
           </div>
-        )
+        );
       }
-      
+
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>
 

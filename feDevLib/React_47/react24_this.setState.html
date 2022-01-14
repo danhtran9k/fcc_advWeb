@@ -86,6 +86,9 @@ class MyComponent extends React.Component {
         }
         handleClick() {
           // Change code below this line
+          this.setState({
+            name: 'React Rocks!',
+          });
           // Change code above this line
         }
         render() {
@@ -98,16 +101,14 @@ class MyComponent extends React.Component {
         }
       }
 
-
       function App() {
         return (
           <div>
-            
+            <MyComponent />
           </div>
-        )
+        );
       }
-      
-      
+
       // ====================================================
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>

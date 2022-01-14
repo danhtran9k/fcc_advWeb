@@ -64,6 +64,7 @@ class MyComponent extends React.Component {
         }
         componentWillMount() {
           // Change code below this line
+          console.log('component will mountttt!');
           // Change code above this line
         }
         render() {
@@ -74,11 +75,11 @@ class MyComponent extends React.Component {
       function App() {
         return (
           <div>
-            
+            <MyComponent />
           </div>
-        )
+        );
       }
-      
+
       // ====================================================
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>

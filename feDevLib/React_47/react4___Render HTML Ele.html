@@ -56,7 +56,8 @@ const JSX = (
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">root div</div>
+    <div id="challenge-node">challenge-node div</div>
     <script type="text/babel">
       // ====================================================
       // direct js here for offline load
@@ -67,17 +68,10 @@ const JSX = (
           <p>Lets render this to the DOM</p>
         </div>
       );
-
-      function App() {
-        return (
-          <div>
-            
-          </div>
-        )
-      }
-
+      
+      const targetNode = document.getElementById('challenge-node')
       // ====================================================
-      ReactDOM.render(<App />, document.getElementById('root'));
+      ReactDOM.render(JSX, targetNode);
     </script>
 
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>

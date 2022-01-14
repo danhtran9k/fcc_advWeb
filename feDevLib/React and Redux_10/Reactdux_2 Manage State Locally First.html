@@ -1,4 +1,4 @@
-/*
+<!-- /*
 
 ==================================================================
 LINK
@@ -59,28 +59,75 @@ class DisplayMessages extends React.Component {
 //   }
 // };
 
-// ==================================================================
+// ================================================================== -->
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbell_template</title>
+    <style></style>
+  </head>
 
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ====================================================
+      // direct js here for offline load
+      class DisplayMessages extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            input: '',
+            messages: [],
+          };
+        }
+        // Add handleChange() and submitMessage() methods here
 
-class DisplayMessages extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        input: '',
-        messages: []
+        handleChange(event) {
+          this.setState({
+            input: event.target.value,
+            messages: this.state.messages,
+          });
+        }
+
+        submitMessage = () => {
+          this.setState(({ messages, input }) => {
+            return {
+              messages: [...messages, input],
+              input: '',
+            };
+          });
+        };
+
+        render() {
+          return (
+            <div>
+              <h2>Type in a new Message:</h2>
+              {/* Render an input, button, and ul below this li  ne */}
+              <input
+                onChange={this.handleChange.bind(this)}
+                value={this.state.input}
+              />
+              <button onClick={this.submitMessage}> nut </button>
+              <ul>
+                {this.state.messages.map((el, idx) => (
+                  <li key={idx}>{el}</li>
+                ))}
+              </ul>
+              {/* Change code above this line */}
+            </div>
+          );
+        }
       }
-    }
-    // Add handleChange() and submitMessage() methods here
-  
-    render() {
-      return (
-        <div>
-          <h2>Type in a new Message:</h2>
-          { /* Render an input, button, and ul below this line */ }
-  
-          { /* Change code above this line */ }
-        </div>
-      );
-    }
-  };
+      // ====================================================
+      ReactDOM.render(<DisplayMessages />, document.getElementById('root'));
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </body>
+</html>

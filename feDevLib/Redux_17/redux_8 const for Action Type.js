@@ -80,7 +80,8 @@ const logoutUser = () => {
 
 */
 
-
+const LOGIN = 'LOGIN';
+const LOGOUT = 'LOGOUT';
 
 const defaultState = {
     authenticated: false
@@ -89,11 +90,11 @@ const defaultState = {
   const authReducer = (state = defaultState, action) => {
   
     switch (action.type) {
-      case 'LOGIN': 
+      case LOGIN: 
         return {
           authenticated: true
         }
-      case 'LOGOUT': 
+      case LOGOUT: 
         return {
           authenticated: false
         }
@@ -109,12 +110,12 @@ const defaultState = {
   
   const loginUser = () => {
     return {
-      type: 'LOGIN'
+      type: LOGIN
     }
   };
   
   const logoutUser = () => {
     return {
-      type: 'LOGOUT'
+      type: LOGOUT
     }
   };

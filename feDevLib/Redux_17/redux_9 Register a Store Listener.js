@@ -77,7 +77,10 @@ const store = Redux.createStore(reducer);
 let count = 0;
 
 // Change code below this line
-
+const innCrease = () => {
+  count++
+}
+store.subscribe(innCrease)
 // Change code above this line
 
 store.dispatch({type: ADD});

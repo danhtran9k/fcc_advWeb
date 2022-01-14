@@ -81,23 +81,21 @@ class MyComponent extends React.Component {
           return (
             <div>
               {/* Change code below this line */}
-
+              <h1>{this.state.name}</h1>
               {/* Change code above this line */}
             </div>
           );
         }
       }
 
-
       function App() {
         return (
           <div>
-            
+            <MyComponent />
           </div>
-        )
+        );
       }
-      
-      
+
       // ====================================================
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>

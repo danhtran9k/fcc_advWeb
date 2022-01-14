@@ -60,16 +60,14 @@ const JSX = (
       const JSX = (
         <div>
           <h1>This is a block of JSX</h1>
+          {/* correct JSX comment */}
+          // Wrong JSX comment
           <p>Here's a subtitle</p>
         </div>
       );
 
       function App() {
-        return (
-          <div>
-            
-          </div>
-        )
+        return <div>{JSX}</div>;
       }
 
       // ====================================================

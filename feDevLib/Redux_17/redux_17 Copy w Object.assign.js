@@ -70,7 +70,7 @@ const defaultState = {
     switch(action.type) {
       case 'ONLINE':
         // Don't mutate state here or the tests will fail
-        return
+        return Object.assign({}, state, {status: 'online'});
       default:
         return state;
     }

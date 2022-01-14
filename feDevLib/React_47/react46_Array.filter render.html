@@ -126,8 +126,10 @@ class MyComponent extends React.Component {
           };
         }
         render() {
-          const usersOnline = null; // Change this line
-          const renderOnline = null; // Change this line
+          // const usersOnline = null; // Change this line
+          const renderOnline = this.state.users
+            .filter((el) => el.online === true)
+            .map((el, index) => <li key={index}>{el.username}</li>); // Change this line
           return (
             <div>
               <h1>Current Online Users:</h1>
@@ -138,15 +140,15 @@ class MyComponent extends React.Component {
       }
 
       // ====================================================
-      
+
       function App() {
         return (
           <div>
-            
+            <MyComponent />
           </div>
-        )
+        );
       }
-      
+
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>
 

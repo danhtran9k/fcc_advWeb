@@ -45,14 +45,36 @@ const store = null; // Define the Redux store here, passing in your reducers
 ==================================================================
 
 */
+// Define a constant for increment action types
+const INCREMENT = 'INCREMENT';
+// Define a constant for decrement action types
+const DECREMENT = 'DECREMENT';
 
-const INCREMENT = null; // Define a constant for increment action types
-const DECREMENT = null; // Define a constant for decrement action types
+// Define the counter reducer which will increment or decrement the state based on the action it receives
+const counterReducer = (state = 0, action) => {
+  switch (action.type) {
+    case INCREMENT:
+      state = state + 1;
+      return state;
+    case DECREMENT:
+      state = state - 1;
+      return state;
+    default:
+      return state;
+  }
+};
 
-const counterReducer = null; // Define the counter reducer which will increment or decrement the state based on the action it receives
+// Define an action creator for incrementing
+const incAction = () => {
+  return { type: INCREMENT };
+};
 
-const incAction = null; // Define an action creator for incrementing
+// Define an action creator for decrementing
+const decAction = () => {
+  return { type: DECREMENT };
+};
 
-const decAction = null; // Define an action creator for decrementing
-
-const store = null; // Define the Redux store here, passing in your reducers
+// Define the Redux store here, passing in your reducers
+const store = Redux.createStore(counterReducer);
+// =================================
+// State set thẳng hằng ko hay lắm nhưng vẫn pass testcase fcc

@@ -96,9 +96,12 @@ class GateKeeper extends React.Component {
         }
         render() {
           let inputStyle = {
-            border: '1px solid black',
+            // Change code below this line
+            border:
+              this.state.input.length > 15
+                ? '3px solid red'
+                : '1px solid black',
           };
-          // Change code below this line
 
           // Change code above this line
           return (
@@ -116,15 +119,15 @@ class GateKeeper extends React.Component {
       }
 
       // ====================================================
-      
+
       function App() {
         return (
           <div>
-            
+            <GateKeeper />
           </div>
-        )
+        );
       }
-      
+
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>
 

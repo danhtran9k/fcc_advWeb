@@ -77,7 +77,9 @@ class ShoppingCart extends React.Component {
       };
 
       // Change code below this line
-
+      Items.propTypes = {
+        quantity: PropTypes.number.isRequired,
+      };
       // Change code above this line
 
       Items.defaultProps = {
@@ -93,15 +95,10 @@ class ShoppingCart extends React.Component {
         }
       }
 
-      
       function App() {
-        return (
-          <div>
-            
-          </div>
-        )
+        return <div></div>;
       }
-      
+
       // ====================================================
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>

@@ -121,7 +121,11 @@ class RenderInput extends React.Component {
           return (
             <div>
               {/* Change code below this line */}
-
+              <GetInput
+                input={this.state.inputValue}
+                handleChange={this.handleChange}
+              />
+              <RenderInput input={this.state.inputValue} />
               {/* Change code above this line */}
             </div>
           );
@@ -162,11 +166,11 @@ class RenderInput extends React.Component {
       function App() {
         return (
           <div>
-            
+            <MyApp />
           </div>
-        )
+        );
       }
-      
+
       // ====================================================
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>

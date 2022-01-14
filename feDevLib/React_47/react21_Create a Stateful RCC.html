@@ -73,7 +73,9 @@ class StatefulComponent extends React.Component {
         constructor(props) {
           super(props);
           // Only change code below this line
-
+          this.state = {
+            name: '',
+          };
           // Only change code above this line
         }
         render() {
@@ -85,15 +87,14 @@ class StatefulComponent extends React.Component {
         }
       }
 
-      
       function App() {
         return (
           <div>
-            
+            <StatefulComponent />
           </div>
-        )
+        );
       }
-      
+
       // ====================================================
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>

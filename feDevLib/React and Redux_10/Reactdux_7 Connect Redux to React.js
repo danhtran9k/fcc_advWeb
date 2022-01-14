@@ -101,3 +101,8 @@ const addMessage = (message) => {
   
   const connect = ReactRedux.connect;
   // Change code below this line
+
+  const ConnectedComponent = connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Presentational);

@@ -47,23 +47,31 @@ SETUP
 
   <body>
     <div id="root"></div>
+    <div id="challenge-node">challenge-node div</div>
+
     <script type="text/babel">
       // ====================================================
       // direct js here for offline load
       // Change code below this line
 
-
-      function App() {
-        return (
-          <div>
-            
-          </div>
-        )
+      class MyComponent extends React.Component {
+        constructor(props) {
+          super(props);
+        }
+        render() {
+          return (
+            <div>
+              <h1>My First React Component!</h1>
+            </div>
+          );
+        }
       }
-      
-      
+
       // ====================================================
-      ReactDOM.render(<App />, document.getElementById('root'));
+      ReactDOM.render(
+        <MyComponent />,
+        document.getElementById('challenge-node')
+      );
     </script>
 
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>

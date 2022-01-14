@@ -68,7 +68,7 @@ SETUP
           {
             /* Change code below this line */
           }
-          return <h1></h1>;
+          return <h1>{this.props.fiftyFifty ? 'You Win!' : 'You Lose!'}</h1>;
           {
             /* Change code above this line */
           }
@@ -87,17 +87,17 @@ SETUP
           this.setState((prevState) => {
             // Complete the return statement:
             return {
-              counter: prevState,
+              counter: prevState.counter + 1,
             };
           });
         }
         render() {
-          const expression = null; // Change this line
+          const expression = Math.random() >= 0.5; // Change this line
           return (
             <div>
               <button onClick={this.handleClick}>Play Again</button>
               {/* Change code below this line */}
-
+              <Results fiftyFifty={expression} />
               {/* Change code above this line */}
               <p>{'Turn: ' + this.state.counter}</p>
             </div>
@@ -105,17 +105,16 @@ SETUP
         }
       }
 
-      
       // ====================================================
-      
+
       function App() {
         return (
           <div>
-            
+            <GameOfChance />
           </div>
-        )
+        );
       }
-      
+
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>
 

@@ -91,22 +91,22 @@ class MyComponent extends React.Component {
           return (
             <div>
               <button onClick={this.toggleDisplay}>Toggle Display</button>
-              <h1>Displayed!</h1>
+              {this.state.display && <h1>Displayed!</h1>}
             </div>
           );
         }
       }
 
       // ====================================================
-      
+
       function App() {
         return (
           <div>
-            
+            <MyComponent />
           </div>
-        )
+        );
       }
-      
+
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>
 

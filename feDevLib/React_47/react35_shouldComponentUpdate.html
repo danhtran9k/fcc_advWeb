@@ -96,7 +96,7 @@ class Controller extends React.Component {
         shouldComponentUpdate(nextProps, nextState) {
           console.log('Should I update?');
           // Change code below this line
-          return true;
+          return nextProps.value % 2 == 0 ? true : false;
           // Change code above this line
         }
         componentDidUpdate() {
@@ -129,17 +129,17 @@ class Controller extends React.Component {
           );
         }
       }
-      
+
       // ====================================================
-      
+
       function App() {
         return (
           <div>
-            
+            <Controller />
           </div>
-        )
+        );
       }
-      
+
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>
 

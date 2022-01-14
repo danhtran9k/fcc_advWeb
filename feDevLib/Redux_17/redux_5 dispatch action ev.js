@@ -56,3 +56,4 @@ const store = Redux.createStore(
   };
   
   // Dispatch the action here:
+  store.dispatch(loginAction());
